@@ -1,8 +1,8 @@
 package board;
 
-import java.util.List;
+import java.util.*;
 
-import board.triple.Triple;
+import triple.Triple;
 
 public class Board {
   public int size;

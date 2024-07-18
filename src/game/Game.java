@@ -20,7 +20,7 @@ public class Game {
    public void solveSudoku(int row , int col) {
 
     if(row == board.size) {
-        System.out.println("Sudoku Solved!!");
+        System.out.println("Sudoku Solved!!" + player.getPlayerName());
         board.printBoard();
         return;
     }
@@ -33,7 +33,7 @@ public class Game {
         nrow = row;
         ncol = col+1;
      }
-     if(board.matrix[row][col]  != 0) {
+     if(board.matrix[row][col]!= 0) {
           solveSudoku(nrow, ncol);
      } else {
         for(int i=1;i<=9;i++) {
@@ -61,9 +61,10 @@ public class Game {
      int tempcol = col/3*3;
 
      for (int i = 0; i <3; i++) {
-        if (matrix[temprow +1][tempcol+ 1] == val) {
+      for(int j=0;j<3;j++)
+       { if (matrix[temprow +i][tempcol+ j] == val) {
             return false;
-        }
+        }}
      } 
      return true;
    }

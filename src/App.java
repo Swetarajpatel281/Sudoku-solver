@@ -1,14 +1,17 @@
 import player.Player;
+import triple.Triple;
+
 import java.util.ArrayList;
 import java.util.List;
-
 import board.Board;
-import board.triple.Triple;
 import game.Game;
+
+// import board.QueenBoard;
+// import game.QueenGame;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        Player p = new Player("sweta", 20);
+      Player p = new Player("sweta", 20);
         System.out.println(p.getPlayerName());
 
         Board b = new Board(9);
@@ -59,7 +62,11 @@ public class App {
         b.printBoard();
 
         Game game = new Game(b, p);
-        game.play();
+        game.play();  
+
+        // QueenBoard bd = new QueenBoard(4);
+        // QueenGame game = new QueenGame(bd);
+        // game.play();
 
     }
 

@@ -1,4 +1,4 @@
-package board.triple;
+package triple;
 
 public class Triple {
     public int row;
